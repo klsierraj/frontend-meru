@@ -4,14 +4,14 @@ export async function loginUser(email: string, password: string) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email, password }), // Enviar `email` y `password` como espera el backend
+      body: JSON.stringify({ email, password }),
     });
   
     if (!response.ok) {
       throw new Error('Failed to login');
     }
   
-    return response.json(); // Esto devolverá el token JWT
+    return response.json(); 
   }
   
   export async function registerUser(userName: string, email: string, password: string) {
@@ -27,6 +27,6 @@ export async function loginUser(email: string, password: string) {
       throw new Error('Failed to register');
     }
   
-    return response.json(); // Devuelve la respuesta JSON si es necesario
+    return response.json(); 
   }
   
