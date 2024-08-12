@@ -6,7 +6,7 @@ import { getProductById, updateProduct } from '@/services/productsService';
 
 
 export default function EditProduct() {
-  const { id } = useParams(); // Obtener el ID del producto desde la URL
+  const { id } = useParams(); 
   const router = useRouter();
   const { user } = useAuthStore();
   const [name, setName] = useState('');
